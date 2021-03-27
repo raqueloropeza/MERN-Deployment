@@ -37,7 +37,7 @@ const EditPet = (props) =>{
                 console.log(res.data);
                 if(res.data.pet){
                     props.setLoaded(false)
-                    navigate("/pets")
+                    navigate("/")
                 }
                 else {
                     setErrors(res.data.error.errors);
