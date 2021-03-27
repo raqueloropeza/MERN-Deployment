@@ -31,7 +31,7 @@ const CreatePet = (props) =>{
                 console.log(res.data);
                 if(res.data.pet){
                     props.setLoaded(false)
-                    navigate("/pets")
+                    navigate("/")
                 }
                 else {
                     setErrors(res.data.error.errors);
@@ -44,7 +44,7 @@ const CreatePet = (props) =>{
         <div className="container">
             <h2 className="mt-3 mb-3"> Know a pet needing a home? </h2>
             <div className= "row d-flex justify-content-end mb-5">
-                <Link to ="/pets">back to home</Link>
+                <Link to ="/">back to home</Link>
             </div>
             <Form form={form} setForm={setForm} onChangeHandler={onChangeHandler} onSubmitHandler={onSubmitHandler} errors={errors} setErrors={setErrors}/>
 

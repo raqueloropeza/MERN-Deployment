@@ -16,7 +16,7 @@ const SinglePet =(props)=>{
         axios.delete(`http://localhost:8000/api/pets/delete/${id}`)
         .then(res=>{
             console.log(res);
-            navigate("/pets")
+            navigate("/")
         })
         .catch(err => console.log(err))
     }
@@ -33,7 +33,7 @@ const SinglePet =(props)=>{
     return(
         <div className="container mt-3">
             <div className= "row d-flex justify-content-end">
-                <Link to="/pets">Back to Home</Link>
+                <Link to="/">Back to Home</Link>
             </div>
             <div className= "row d-flex justify-content-center">
                 <h1 className="display-3">Details about: {pet.name}</h1>
